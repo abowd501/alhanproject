@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مكتب السفر والسياحة | رحلاتك أسهل معنا</title>
+  <meta name="description" content="مكتب سفر وسياحة يقدم حجوزات طيران وفنادق وباقات سياحية وتأشيرات وخدمة عملاء على مدار الساعة." />
+  <style>
+    :root{
+      --primary:#0ea5e9; /* الأزرق السماوي */
+      --primary-dark:#0284c7;
+      --accent:#f59e0b; /* برتقالي */
+      --text:#0f172a; /* slate-900 */
+      --muted:#475569; /* slate-600 */
+      --bg:#f8fafc; /* slate-50 */
+      --card:#ffffff;
+      --success:#10b981;
+      --danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Kufi Arabic","Tajawal","Cairo",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--primary);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,94%);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:.8rem;border:1px solid transparent;background:var(--primary);color:#fff;font-weight:600;cursor:pointer;transition:.2s}
+    .btn:hover{background:var(--primary-dark)}
+    .btn-outline{background:transparent;color:var(--primary);border-color:var(--primary)}
+    .btn-outline:hover{background:#e0f2fe}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #e2e8f0}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+    .brand{display:flex;align-items:center;gap:.7rem;font-weight:800;color:var(--text)}
+    .logo{width:150px;height:55px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;color:#fff;font-size:18px}
+    .menu{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+    .menu a{color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:2.2rem 0}
+    .hero-card{background:var(--card);border:1px solid #e2e8f0;border-radius:1rem;padding:1.2rem;box-shadow:0 6px 20px rgba(2,8,23,.05)}
+    .badge{display:inline-block;background:#e0f2fe;color:#075985;padding:.25rem .6rem;border-radius:999px;font-weight:700;font-size:.8rem}
+    .headline{font-size:clamp(26px,3.2vw,44px);margin:.6rem 0 1rem}
+    .sub{color:var(--muted);font-size:1.05rem}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.2rem}
+    .feature{background:var(--bg);border:1px solid #e2e8f0;border-radius:.9rem;padding:1rem}
+    .icon{width:40px;height:40px;border-radius:.6rem;display:grid;place-items:center;color:#fff;font-weight:900}
+    .i-blue{background:linear-gradient(135deg,#38bdf8,#0ea5e9)}
+    .i-orange{background:linear-gradient(135deg,#fb923c,#f59e0b)}
+    .i-green{background:linear-gradient(135deg,#34d399,#10b981)}
+    .section{padding:2.8rem 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:var(--card);border:1px solid #e2e8f0;border-radius:1rem;overflow:hidden;box-shadow:0 6px 20px rgba(2,8,23,.05);display:flex;flex-direction:column}
+    .card-body{padding:1rem;display:flex;flex-direction:column;gap:.6rem}
+    .pill{display:inline-block;background:#f1f5f9;color:#0f172a;border:1px solid #e2e8f0;padding:.25rem .6rem;border-radius:999px;font-size:.8rem}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .why li{margin:.4rem 0}
+    .cta{background:linear-gradient(135deg,#0ea5e9 0%,#0284c7 100%);color:#fff;border-radius:1rem;padding:1.6rem;display:grid;gap:1rem}
+    footer{border-top:1px solid #e2e8f0;background:#fff}
+    .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1.2rem;padding:2rem 0}
+    .copy{border-top:1px solid #e2e8f0;padding:.8rem 0;color:#64748b;font-size:.9rem}
+    /* form */
+    form{display:grid;gap:.8rem}
+    input,select,textarea{width:100%;padding:.8rem;border:1px solid #e2e8f0;border-radius:.8rem;background:#fff;font-size:1rem}
+    textarea{min-height:120px}
+    .inline{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+    /* responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;gap:1rem}
+      .cards{grid-template-columns:1fr 1fr}
+      .features{grid-template-columns:1fr 1fr 1fr}
+      .foot{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 600px){
+      .menu{display:none}
+      .cards{grid-template-columns:1fr}
+      .features{grid-template-columns:1fr 1fr}
+      .grid-2{grid-template-columns:1fr}
+      .foot{grid-template-columns:1fr}
+      .hero{padding:1.2rem 0}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        
+        <img class="logo" src="/images/4_5911111550445296708 conv 1.jpeg" alt="" srcset="">
+        <!--
+        <div>
+          <div aria-label="اسم المكتب" style="font-size:1.05rem">مكتب الهناء</div>
+          <div style="font-size:.85rem;color:var(--muted)">Travel & Tourism</div> 
+        </div> -->
+      </div>
+      <nav class="menu" aria-label="قائمة">
+        <a href="#services">الخدمات</a>
+        <a href="#packages">الباقات</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">اتصل بنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div>
+        <span class="badge">عروض رائعة • وبأقل الاسعار  </span>
+        <h1 class="headline">سافر بسهولة مع مكتب <span style="color:var(--primary)">الهناء</span></h1>
+        <p class="sub">نوفر لك أفضل أسعار الطيران والفنادق، تنظيم رحلات وباقات سياحية مخصصة، وخدمة استخراج التأشيرات بسرعة وموثوقية.</p>
+        <div style="display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap">
+          <a href="#contact" class="btn">احجز استشارة مجانية</a>
+          <a href="#packages" class="btn btn-outline">استكشف الباقات</a>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="icon i-blue">✈️</div>
+            <h3 style="margin:.6rem 0 .2rem">تذاكر طيران</h3>
+            <p class="sub">حجوزات إلى أكثر من 120 وجهة مع أفضل شركات الطيران.</p>
+          </div>
+          <div class="feature">
+            <div class="icon i-orange">🏨</div>
+            <h3 style="margin:.6rem 0 .2rem"> حجز الشقق الفندقية والمفروشة</h3>
+            <p class="sub"> من أي مكان في العالم وبأسعار تنافسية.</p>
+          </div>
+            <div class="feature">
+            <div class="icon i-green">🏨</div>
+            <h3 style="margin:.6rem 0 .2rem"> بيع وشراء العقارات</h3>
+            <p class="sub">فلل، شقق، أراضي، ومحلات تجارية.</p>
+          </div>
+          <div class="feature">
+            <div class="icon i-green">🛂</div>
+            <h3 style="margin:.6rem 0 .2rem">تأشيرات ومعاملات</h3>
+            <p class="sub">إرشاد كامل ومتطلبات محدثة وإجراءات سريعة.</p>
+          </div>
+          <div class="feature">
+            <div class="icon i-green">🛂</div>
+            <h3 style="margin:.6rem 0 .2rem"> تأجير السيارات</h3>
+            <p class="sub">سيارات اقتصادية، عائلية، وفاخرة حسب الطلب.</p>
+          </div>
+          <div class="feature">
+            <div class="icon i-green">🏨</div>
+            <h3 style="margin:.6rem 0 .2rem">   خدمات هندسية ومعمارية</h3>
+            <p class="sub">فلل، شقق، أراضي، ومحلات تجارية.</p>
+          </div>
+        </div>
+      </div>
+
+        <div class="card" aria-label="أرقام سريعة">
+          <div class="card-body">
+            <h3>أرقام نتفاخر بها</h3>
+            <div class="features" style="margin:0">
+              <div class="feature " style="background:linear-gradient(135deg,#fee2e2,#fecaca);"><strong>+10K</strong><div class="sub">حجز مكتمل</div></div>
+              <div class="feature " style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);"><strong>+20</strong><div class="sub">وجهة حول العالم</div></div>
+              <div class="feature " style="background:linear-gradient(135deg,#dcfce7,#bbf7d0);"><strong>0.8/5</strong><div class="sub">رضا العملاء</div></div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 style="margin:0 0 1rem">خدماتنا</h2>
+        <div class="cards">
+          <article class="card">
+            <div style="aspect-ratio:16/9;background-size: cover;
+            display:grid;place-items:center;font-size:42px; background-image: url('/images/plean.jpg');">
+            </div>
+            <div class="card-body">
+              <h3>حجوزات الطيران</h3>
+              <p class="sub">نبحث لك عن أفضل الأسعار والرحلات المناسبة لخطتك الزمنية.</p>
+              <span class="pill">عروض خاصة</span>
+            </div>
+          </article>
+          <article class="card">
+            <div style="aspect-ratio:16/9; background-size: cover; background-image: url('/images/hotal.jpg'); display:grid;place-items:center;font-size:42px"></div>
+            <div class="card-body">
+              <h3>الفنادق والإقامات</h3>
+              <p class="sub">شبكة واسعة من الفنادق حول العالم بأسعار منافسة.</p>
+              <span class="pill">إلغاء مرن</span>
+            </div>
+          </article>
+          <article class="card">
+            <div style="aspect-ratio:16/9;background-size: cover; background-image: url('/images/visa2.webp');display:grid;place-items:center;font-size:42px"></div>
+            <div class="card-body">
+              <h3>التأشيرات</h3>
+              <p class="sub">مساندة كاملة في جمع المستندات ومواعيد السفارات.</p>
+              <span class="pill">دعم 24/7</span>
+            </div>
+          </article>
+          <article class="card">
+            <div style="aspect-ratio:16/9;background-size: cover; background-image: url('/images/taring2.png'); display:grid;place-items:center;font-size:42px">✈️</div>
+            <div class="card-body">
+              <h3> بيع وشراء العقارات</h3>
+              <p class="sub">نبحث لك عن أفضل الأسعار والرحلات المناسبة لخطتك الزمنية.</p>
+              <span class="pill">عروض خاصة</span>
+            </div>
+          </article>
+          <article class="card">
+            <div style="aspect-ratio:16/9;background-size:cover;background-image: url('/images/booking2.jpg'); display:grid;place-items:center;font-size:42px"></div>
+            <div class="card-body">
+              <h3> تأجير السيارات</h3>
+              <p class="sub">شبكة واسعة من الفنادق حول العالم بأسعار منافسة.</p>
+              <span class="pill">إلغاء مرن</span>
+            </div>
+          </article>
+          <article class="card">
+            <div style="aspect-ratio:16/9;background-size: cover; background-image: url('/images/artach.jpg');display:grid;place-items:center;font-size:42px"></div>
+            <div class="card-body">
+              <h3>خدمات هندسية ومعمارية</h3>
+              <p class="sub">مساندة كاملة في جمع المستندات ومواعيد السفارات.</p>
+              <span class="pill">دعم 24/7</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+     <!--
+    <section id="packages" class="section" style="padding-top:0">
+      <div class="container">
+        <h2 style="margin:0 0 1rem">باقات مميزة</h2>
+        <div class="cards">
+          <article class="card">
+            <div style="aspect-ratio:16/9;background:linear-gradient(135deg,#fde68a,#fbbf24);display:grid;place-items:center;font-weight:800">دبي 4 أيام</div>
+            <div class="card-body">
+              <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                <span class="pill">طيران ذهاب وعودة</span>
+                <span class="pill">فندق 4 نجوم</span>
+                <span class="pill">تنقلات</span>
+              </div>
+              <h3 style="margin:.6rem 0">ابتداءً من 1999 ر.س</h3>
+              <button class="btn btn-outline" onclick="selectPackage('دبي 4 أيام')">احجز الآن</button>
+            </div>
+          </article>
+          <article class="card">
+            <div style="aspect-ratio:16/9;background:linear-gradient(135deg,#93c5fd,#3b82f6);display:grid;place-items:center;font-weight:800">إسطنبول 5 أيام</div>
+            <div class="card-body">
+              <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                <span class="pill">إفطار يومي</span>
+                <span class="pill">جولة مدينة</span>
+                <span class="pill">تأمين سفر</span>
+              </div>
+              <h3 style="margin:.6rem 0">ابتداءً من 2499 ر.س</h3>
+              <button class="btn btn-outline" onclick="selectPackage('إسطنبول 5 أيام')">احجز الآن</button>
+            </div>
+          </article>
+          <article class="card">
+            <div style="aspect-ratio:16/9;background:linear-gradient(135deg,#a7f3d0,#34d399);display:grid;place-items:center;font-weight:800">مالديف 6 أيام</div>
+            <div class="card-body">
+              <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                <span class="pill">منتجع على البحر</span>
+                <span class="pill">نقل بحري</span>
+                <span class="pill">جلسة سبا</span>
+              </div>
+              <h3 style="margin:.6rem 0">ابتداءً من 5999 ر.س</h3>
+              <button class="btn btn-outline" onclick="selectPackage('مالديف 6 أيام')">احجز الآن</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>من نحن</h2>
+          <p class="sub">مكتب الهناء للخدمات العامة هو منصة خدمية متكاملة، تأسست في محافظة حضرموت – اليمن، لتكون وجهتك الأولى لحجز الشقق، تأجير السيارات، البيع والشراء العقاري، والخدمات الذكية الأخرى، سواء كنت من داخل اليمن أو من أي دولة في العالم.</p>
+          <ul class="why">
+            <li>اعتماد رسمي وسجل تجاري.</li>
+            <li>دعم عملاء على مدار الساعة.</li>
+            <li>سياسات إلغاء مرنة وواضحة.</li>
+          </ul>
+        </div>
+
+        <div class="" aria-label="نموذج بحث سريع">
+       <!-- <h3 style="margin:0 0 .8rem">ابحث عن رحلتك</h3> -->
+        
+        <br>
+        <form onsubmit="event.preventDefault(); searchTrip();">
+          <div class="">
+            <div class="hero-card">
+               <h3 style="margin:0 0 .8rem ;text-align: center; color:var(--primary)" >رؤيتنا 🎯</h3>
+              أن نكون الوجهة الرقمية المميزة في اليمن لتقديم الخدمات العامة واللوجستية بكل احترافية وسهولة.
+            </div><br>
+            <div class="hero-card">
+               <h3 style="margin:0 0 .8rem; text-align: center; color:var(--primary);" class="">رسالتنا 💼</h3>
+
+              أن نكون الوجهة الرقمية المميزة في اليمن لتقديم الخدمات العامة واللوجستية بكل احترافية وسهولة.
+            </div>
+          </div>
+          <div id="searchResult" class="sub" style="display:none;background:#f1f5f9;padding:.6rem;border-radius:.6rem"></div>
+        </form>
+      </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container cta">
+      <div>
+        <h2 style="margin:0">جاهز لبدء رحلتك؟</h2>
+        <p style="margin:.2rem 0 0">تواصل معنا الآن لتحصل على عرض مخصص خلال أقل من ساعة.</p>
+      </div>
+      <div>
+        <a href="#contact" class="btn" style="background:#fff;color:var(--primary)"> اتصل بنا وأحجز رحلتك  </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>اتصل بنا</h2>
+          <p class="sub">نسعد بخدمتك عبر الهاتف أو الواتساب أو البريد الإلكتروني.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.4rem">
+            <li>الهاتف: <a href="tel:+96777071344">+967 77071344</a></li>
+            <li>واتساب: <a href="https://wa.me/96777071344" target="_blank" rel="noopener">بدء محادثة</a></li>
+            <li>البريد: <a href="mailto:alhana@example.com">alhana@example.com</a></li>
+            <li>العنوان: اليمن - حضرموت - تريم   </li>
+          </ul>
+        </div>
+        <!--
+        <div class="card">
+          <div class="card-body">
+            <h3>نموذج طلب عرض</h3>
+            <form onsubmit="event.preventDefault(); submitQuote();">
+              <div class="inline">
+                <div>
+                  <label for="name">الاسم</label>
+                  <input id="name" placeholder="الاسم الكامل" required />
+                </div>
+                <div>
+                  <label for="phone">الجوال</label>
+                  <input id="phone" placeholder="+9665xxxxxxx" required />
+                </div>
+              </div>
+              <div class="inline">
+                <div>
+                  <label for="destination">الوجهة</label>
+                  <input id="destination" placeholder="مثال: إسطنبول" required />
+                </div>
+                <div>
+                  <label for="dates">التواريخ</label>
+                  <input id="dates" placeholder="10 - 15 أكتوبر" />
+                </div>
+              </div>
+              <div class="inline">
+                <div>
+                  <label for="adults">عدد البالغين</label>
+                  <select id="adults"><option>1</option><option selected>2</option><option>3</option><option>4+</option></select>
+                </div>
+                <div>
+                  <label for="children">عدد الأطفال</label>
+                  <select id="children"><option>0</option><option>1</option><option>2</option><option>3+</option></select>
+                </div>
+              </div>
+              <div>
+                <label for="notes">ملاحظات</label>
+                <textarea id="notes" placeholder="تفضيلات الطيران، فئة الفندق، الميزانية التقريبية..."></textarea>
+              </div>
+              <button class="btn" type="submit">إرسال الطلب</button>
+              <div id="formStatus" class="sub" style="display:none;padding:.6rem;border-radius:.6rem"></div>
+            </form>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="brand">
+          <img class="logo" src="/images/4_5911111550445296708 conv 1.jpeg" alt="" srcset="">
+          <!--
+          <div>
+            <div style="font-weight:800">مكتب الهناء</div>
+            <div class="sub">خبرة في السفر منذ 2020</div>
+          </div> -->
+        </div>
+        <p class="sub" style="margin-top:.6rem">نضمن لك تجربة سفر مريحة، وأسعار تنافسية، ودعم متواصل قبل وأثناء وبعد رحلتك.</p>
+      </div>
+      <div>
+        <h4 style="margin:.2rem 0 .6rem">روابط</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.3rem">
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#packages">الباقات</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin:.2rem 0 .6rem">تواصل</h4>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.3rem">
+          <li><a href="tel:+96777071344">+967 770713447</a></li>
+          <li><a href="mailto:alhana@example.com">alhana@example.com</a></li>
+          <li><a href="https://wa.me/00967770713447" target="_blank" rel="noopener">واتساب مباشر</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copy">© <span id="year"></span> مكتب رحلاتكم. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <script>
+    function searchTrip(){
+      const from = document.getElementById('from').value.trim();
+      const to = document.getElementById('to').value.trim();
+      const date = document.getElementById('date').value;
+      const pax = document.getElementById('passengers').value;
+      const el = document.getElementById('searchResult');
+      el.style.display='block';
+      if(!from || !to || !date){
+        el.style.background='#fee2e2'; el.style.color='#b91c1c';
+        el.textContent='يرجى تعبئة جميع الحقول.';
+        return;
+      }
+      el.style.background='#ecfeff'; el.style.color='#0c4a6e';
+      el.textContent = `تم استلام بحثك: ${from} → ${to} بتاريخ ${date} لعدد ${pax} مسافر. سنوافيك بالنتائج قريباً.`;
+    }
+
+    function selectPackage(name){
+      window.location.hash = '#contact';
+      const notes = document.getElementById('notes');
+      if(notes){
+        notes.value = `أرغب في حجز باقة: ${name}`;
+        notes.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+    }
+
+    function submitQuote(){
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const destination = document.getElementById('destination').value.trim();
+      const status = document.getElementById('formStatus');
+      status.style.display='block';
+      if(!name || !phone || !destination){
+        status.style.background='#fee2e2'; status.style.color='#b91c1c';
+        status.textContent='يرجى تعبئة الحقول المطلوبة.';
+        return;
+      }
+      status.style.background='#ecfdf5'; status.style.color='#065f46';
+      status.textContent='تم إرسال طلبك بنجاح! سنتواصل معك خلال ساعة واحدة.';
+      // هنا يمكنك إرسال النموذج إلى بريدك أو API عبر fetch
+      // fetch('/api/quote', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({...})})
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
